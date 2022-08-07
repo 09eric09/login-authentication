@@ -33,14 +33,6 @@ const Login = (props) => {
   const [emailState, dispatchEmail] = useReducer(emailReducer, {value:'', isValid:null});
   const [passwordState, dispatchPassword] = useReducer(passwordReducer, {value:'', isValid:null});
 
-  // useEffect(() => {
-  //   console.log('EFFECT RUNNING');
-
-  //   return () => {
-  //     console.log('EFFECT CLEANUP');
-  //   };
-  // }, []);
-
   useEffect(() => {
     const identifier = setTimeout(() => {
       console.log('Checking form validity!');
