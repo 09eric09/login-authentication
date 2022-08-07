@@ -27,11 +27,12 @@ function App() {
 
   return (
     <AuthContext.Provider value={{
-      // isLoggedIn is state managed here in App.js, we are using it with Context
+      //isLoggedIn is state managed here in App.js, we are using it with Context
       //instead of passing the value down as a prop
-      isLoggedIn: isLoggedIn
+      isLoggedIn: isLoggedIn,
+      onLogout: logoutHandler
     }}>
-      <MainHeader onLogout={logoutHandler} />
+      <MainHeader/>
       <main>
         {!isLoggedIn && <Login onLogin={loginHandler} />}
         {isLoggedIn && <Home onLogout={logoutHandler} />}
